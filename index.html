@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Little Pony Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1c6e0;
+            color: #5f4b8b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f8a5c2;
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            border-bottom: 5px solid #c56cf0;
+        }
+        .banner {
+            background: linear-gradient(to right, #f8a5c2, #c56cf0);
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            margin-top: 20px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .product:hover {
+            transform: scale(1.1); /* Збільшуємо елемент при наведенні */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Більша тінь */
+        }
+        .product.show {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 1s, transform 1s;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #f8a5c2;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 18px;
+            border-top: 5px solid #c56cf0;
+            margin-top: 30px;
+        }
+        .smiley {
+            font-size: 28px;
+            color: #ffcc00;
+        }
+        .fun-text {
+            font-size: 20px;
+            color: #9b59b6;
+            margin-top: 10px;
+        }
+        .section {
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #5f4b8b;
+        }
+        .section p {
+            font-size: 18px;
+            color: #333;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #f8a5c2;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #c56cf0;
+            transform: scale(1.1); /* Кнопка збільшується */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Little Pony Store
+    </header>
+
+    <div class="banner">
+        Тут ви знайдете найкращі товари для справжніх шанувальників My Little Pony! 🌈
+    </div>
+
+    <div class="products">
+        <div class="product">
+            <img src="https://example.com/pony1.jpg" alt="Pony 1">
+            <h3>Єдиноріг Рейнбоу Деш</h3>
+            <p>Ціна: 2,500,000 грн</p>
+            <p class="fun-text">Цей єдиноріг може змінити погоду! Якщо ви не готові до магії, краще не купуйте 😜</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/pony2.jpg" alt="Pony 2">
+            <h3>Пегас Флаттершай</h3>
+            <p>Ціна: 3,000,000 грн</p>
+            <p class="fun-text">Швидше за все, вона вам розповість, як заспокоїти будь-яку ситуацію... або просто літатиме!</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/pony3.jpg" alt="Pony 3">
+            <h3>Твілит Спаркл</h3>
+            <p>Ціна: 3,500,000 грн</p>
+            <p class="fun-text">Готові до магічних вибухів? Це для вас!</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/pony4.jpg" alt="Pony 4">
+            <h3>Раріті - Модний Поні</h3>
+            <p>Ціна: 4,000,000 грн</p>
+            <p class="fun-text">Ваша шафа ще не має такого стильного поні. Справжній fashion-icon! 💅</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/pony5.jpg" alt="Pony 5">
+            <h3>Айрон Поні</h3>
+            <p>Ціна: 5,000,000 грн</p>
+            <p class="fun-text">Додайте в своєму житті трохи техно-магії, яку подарує цей потужний поні!</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/pony6.jpg" alt="Pony 6">
+            <h3>Лунарія - Нічний Поні</h3>
+            <p>Ціна: 2,200,000 грн</p>
+            <p class="fun-text">Більше не потрібно влаштовувати вечірки, цей поні зробить усе для вас! 🎉</p>
+        </div>
+    </div>
+
+    <!-- Відгуки -->
+    <div class="section">
+        <h2>Відгуки наших клієнтів</h2>
+        <p>"Ці поні дійсно мають магію! Купив Рейнбоу Деш — і вже після першого використання мій світ став яскравіший!" — Олена, Київ</p>
+        <p>"Я не вірила, що поні може літати, але Флаттершай просто чудова! Купую ще одне!" — Сергій, Львів</p>
+        <button id="moreBtn">Показати більше</button>
+        <div id="moreContent" style="display: none;">
+            <p>"Цей магазин — найкращий! Поні не тільки красиві, але й дуже веселі!" — Марія, Одеса</p>
+            <p>"Магія працює! Дякую за чудовий сервіс!" — Павло, Харків</p>
+        </div>
+    </div>
+
+    <!-- Контактні дані -->
+    <div class="section">
+        <h2>Контактні дані</h2>
+        <p>Ми завжди раді відповісти на ваші запитання!</p>
+        <ul>
+            <li>Телефон: +380 99 123 45 67</li>
+            <li>Email: info@mylittleponystore.com</li>
+            <li>Адреса: вул. Поні, 5, Київ, Україна</li>
+        </ul>
+    </div>
+
+    <!-- Способи повернення товару -->
+    <div class="section">
+        <h2>Способи повернення товару</h2>
+        <p>Якщо вам не сподобалося, ми завжди готові повернути кошти або замінити товар. Просто зв'яжіться з нами через контактні дані.</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Little Pony Store. Усі права захищені.</p>
+    </footer>
+
+    <script>
+        // Кнопка "Показати більше" для відгуків
+        document.getElementById('moreBtn').addEventListener('click', function() {
+            var content = document.getElementById('moreContent');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                this.textContent = 'Сховати';
+            } else {
+                content.style.display = 'none';
+                this.textContent = 'Показати більше';
+            }
+        });
+
+        // Анімація прокручування
+        window.addEventListener("scroll", function() {
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productTop = product.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (productTop < windowHeight - 100) {
+                    product.classList.add("show");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
